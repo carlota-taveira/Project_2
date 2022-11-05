@@ -1,5 +1,6 @@
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -12,16 +13,50 @@ h1 {
 }
 
 
+
 .container{
-  min-height:480px;
-  max-height: 560px;
+  min-height:760px;
+  max-height: 820px;
   
-  background-color:#b0b2b4;
+  background-color:#c7c8ca; 
   color:#fff;
   text-align: center;
   display: flex;
   flex-direction: column;
     align-items: center;
+}
+
+#password{
+  text-align: center;
+  width: 300px;
+}
+
+#first_name{
+  text-align: center;
+  width: 300px;
+}
+
+#email{
+  text-align: center;
+  width: 300px;
+}
+
+#BIO{
+  text-align: center;
+  width: 300px;
+  height: 150px;
+}
+
+#last_name{
+  text-align: center;
+}
+
+#password_confirmation{
+  text-align: center;
+}
+
+#password_change{
+  text-align: center;
 }
 
 .avatar {
@@ -80,3 +115,194 @@ h1 {
   }
 }
 
+@import "compass/css3";
+
+* { box-sizing: border-box; }
+
+body {
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  color:white;
+  font-size:12px;
+  /* background:#333 url(/images/classy_fabric.png) */;
+  background-image: url("https://webunwto.s3.eu-west-1.amazonaws.com/styles/slider/s3/2021-03/slider-un-tourism-news.jpg?VersionId=QU9aGcui.I2bST63E7FHPA00otBMy6IG&itok=BuxPUK22");
+  background-position: -220px;
+}
+
+form {
+ 	background:#111; 
+  width:600px;
+  margin:30px auto;
+  border-radius:1.8em;
+  border:0.5px solid #918e8e;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 8px 10px 5px rgb(28, 5, 71);
+}
+
+form:after {
+  content:"";
+  display:block;
+  position:absolute;
+  height:1px;
+  width:100px;
+  left:20%;
+  background:linear-gradient(left, #111, #444, #b6b6b8, #444, #111);
+  top:0;
+}
+
+form:before {
+ 	content:"";
+  display:block;
+  position:absolute;
+  width:8px;
+  height:5px;
+  border-radius:50%;
+  left:34%;
+  top:-7px;
+  box-shadow: 0 0 6px 4px #fff; 
+}
+
+.inset {
+ 	padding:20px; 
+  border-top:1px solid #19191a;
+}
+
+form h1 {
+  font-size:18px;
+  text-shadow:0 1px 0 black;
+  text-align:center;
+  padding:15px 0;
+  border-bottom:1px solid rgba(0,0,0,1);
+  position:relative;
+}
+
+form h1:after {
+ 	content:"";
+  display:block;
+  width:250px;
+  height:100px;
+  position:absolute;
+  top:0;
+  left:50px;
+  pointer-events:none;
+  transform:rotate(70deg);
+  background:linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0));
+  
+  
+}
+
+label {
+ 	color:#666;
+  display:block;
+  padding-bottom:9px;
+}
+
+input[type=text],
+input[type=password] {
+ 	width:100%;
+  padding:8px 5px;
+  background:linear-gradient(#1f2124, #27292c);
+  border:1px solid #222;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.1);
+  border-radius:0.3em;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+
+
+label[for=remember]{
+ 	color:white;
+  display:inline-block;
+  padding-bottom:0;
+  padding-top:5px;
+}
+
+input[type=checkbox] {
+ 	display:inline-block;
+  vertical-align:top;
+}
+
+.p-container {
+ 	padding:0 20px 20px 20px; 
+}
+
+.p-container:after {
+ 	clear:both;
+  display:table;
+  content:"";
+}
+
+.p-container span {
+  display:block;
+  float:left;
+  color:#82898f;
+  padding-top:8px;
+}
+
+input[type=submit] {
+ 	padding:5px 20px;
+  border:1px solid rgba(0,0,0,0.4);
+  text-shadow:0 -1px 0 rgba(0,0,0,0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 10px 10px rgba(255,255,255,0.1);
+  border-radius:0.3em;
+  background:#303b45;
+  color:white;
+  float:right;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:13px;
+}
+
+input[type=submit]:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 -10px 10px rgba(255,255,255,0.1);
+}
+
+input[type=text]:hover,
+input[type=password]:hover,
+label:hover ~ input[type=text],
+label:hover ~ input[type=password] {
+ 	background:#27292c;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav{
+  background-color: #575858;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30px;
+  font-size: large;
+  font-weight: bold;
+
+}
+
+a:link { text-decoration: none; }
+a {color: white;}
+
+.home{
+  padding-right: 10px;
+}
+
+.sign{
+  padding-right: 10px;
+}
+
+.login{
+  padding-right: 10px;
+}
+
+.logout{
+  padding-right: 10px;
+}

@@ -1,4 +1,4 @@
-<div id="form">
+{{!-- <div id="form">
   <h2>Sign Up</h2>
   <form action="/signup" method="POST">
 
@@ -14,7 +14,34 @@
 
 
     {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div> --}}
+
+<div id="form">
+  {{!-- <h2>Sign Up</h2> --}}
+  <form action="/signup" method="POST">
+
+    <h1>Sign Up</h1>
+    <div class="inset">
+      <p>
+        <label for="email">EMAIL ADDRESS</label>
+        <input type="text" name="email" id="gdeml">
+      </p>
+      <p>
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" id="goodpss">
+      </p>
+    </div>
+    <p class="p-container">
+      <input type="submit" name="go" id="go" value="Sign Up">
+    </p>
+
+
+
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>

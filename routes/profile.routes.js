@@ -3,11 +3,14 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 const router = express.Router();
 
 
+
 const User = require("../models/User.model");
 
 router.get("/profile", (req, res, next) => {
-
-  res.render("profile");
+  res.render("profile/profile");
 });
+
+
+
 
 module.exports = router;

@@ -20,7 +20,15 @@
         <li id="to-right">
           <a href="/signup">Signup</a>
           <a href="/login">Login</a>
+          {{#if isLoggedIn}}
+          {{isLoggedIn}}
           <a href="/logout">Logout</a>
+          {{/if}}
+          {{#if isLoggedIn}}
+          {{isLoggedIn}}
+          <a href="/profile">Profile</a>
+          <a href="/edit_profile">Edit profile</a>
+          {{/if}}
           </form>
         </li>
       </ul>

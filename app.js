@@ -21,6 +21,7 @@ require("./config")(app);
 const capitalize = require("./utils/capitalize");
 const projectName = "HoverProject";
 
+
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
@@ -32,6 +33,10 @@ app.use("/", authRoutes);
 
 const profileRoutes = require("./routes/profile.routes");
 app.use("/", profileRoutes);
+
+const editProfileRoutes = require("./routes/edit_profile.routes");
+app.use("/", editProfileRoutes);
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

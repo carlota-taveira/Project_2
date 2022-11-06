@@ -15,10 +15,10 @@ h1 {
 
 
 .container{
-  min-height:760px;
-  max-height: 820px;
+  min-height:860px;
+  max-height: 920px;
   
-  background-color:#c7c8ca; 
+  /* background-color:#ffffff5b;  */
   color:#fff;
   text-align: center;
   display: flex;
@@ -277,14 +277,22 @@ ul {
 }
 
 .nav{
-  background-color: #575858;
+  background-image: url(/images/grey-darknav.jpg);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #3c3c3c;
   height: 50px;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  display: flex; 
+  align-items: center; 
   justify-content: flex-end;
   padding-right: 30px;
-  font-size: large;
+  font-size:medium;
   font-weight: bold;
+  position: fixed;
+   top: 0;
+   align-items: flex-end; 
 
 }
 
@@ -293,16 +301,251 @@ a {color: white;}
 
 .home{
   padding-right: 10px;
+  font-size: small;
 }
 
 .sign{
   padding-right: 10px;
+  font-size: small;
 }
 
 .login{
   padding-right: 10px;
+  font-size: small;
 }
 
 .logout{
   padding-right: 10px;
+  font-size: small;
+}
+
+.editProfile{
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.editProfile:hover {
+  background-color: #374151;
+}
+
+.editProfile:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .editProfile {
+    padding: .75rem 1.5rem;
+  }
+}
+
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #BA68C8
+}
+
+.profile-button {
+  background: rgb(99, 39, 120);
+  box-shadow: none;
+  border: none
+}
+
+.profile-button:hover {
+  background: #682773
+}
+
+.profile-button:focus {
+  background: #682773;
+  box-shadow: none
+}
+
+.profile-button:active {
+  background: #682773;
+  box-shadow: none
+}
+
+.back:hover {
+  color: #682773;
+  cursor: pointer
+}
+
+.labels {
+  font-size: 11px
+}
+
+.add-experience:hover {
+  background: #BA68C8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #BA68C8
+}
+
+.raw{
+  width: 200px;
+  padding-left: 25px;
+}
+
+.textProf{
+  padding-left: 75px;
+  font-size: larger;
+}
+
+.avatarProfile{
+
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px 10px rgb(10, 14, 108);
+  
+}
+
+.form-control{
+  color: white;
+  
+}
+
+.textProf2{
+  font-size: x-large;
+}
+
+.card{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.card-header{
+  font-size: larger;
+  font-weight: bolder;
+  width: 100%;
+  
+}
+
+body5{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  
+}
+
+.card-link{
+  text-decoration: none;
+  color: rgb(66, 109, 239);
+}
+
+.card-link:hover{
+  color: rgb(0, 0, 0);
+}
+
+hr{
+  box-shadow: 0 12px 20px 2px rgb(10, 14, 108);
+}
+
+
+
+
+
+.home{
+  color: white;
+}
+
+.sign{
+  color: white;
+}
+
+.login{
+  color: white;
+}
+
+.logout{
+  color: white;
+}
+
+:root {
+  --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+}
+
+.card {
+  background: #222;
+  border: 1px solid #dd2476;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  border: 5px solid;
+  border-image-slice: 1;
+  background: var(--gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  border-image-source:  var(--gradient) !important; 
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.btn:hover, .btn:focus {
+      background: var(--gradient) !important;
+  -webkit-background-clip: none !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 5px solid #fff !important; 
+  box-shadow: #222 1px 0 10px;
+  text-decoration: underline;
+}
+
+.homesymb{
+  width: 25px;
+}
+
+.signupsymb{
+  width: 25px;
+}
+
+.loginsymb{
+  width: 25px;
+  
+}
+
+.logoutsymb{
+  width: 25px;
+}
+
+.newstextcarousel{
+  font-size: 35px;
+  color: black;
+  text-shadow: -1.5px 0 rgb(255, 255, 255), 0 1.5px rgb(255, 255, 255), 1.5px 0 rgb(255, 255, 255), 0 -1.5px rgb(255, 255, 255);
+}
+
+.newstitlecarousel{
+  color: rgb(255, 255, 255);
+  text-shadow: -1.5px 0 rgb(0, 0, 0), 0 1.5px rgb(0, 0, 0), 1.5px 0 rgb(0, 0, 0), 0 -1.5px rgb(0, 0, 0);
+  
+}
+
+.card{
+  box-shadow: 0 12px 20px 10px rgb(10, 14, 108);
 }

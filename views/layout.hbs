@@ -1,33 +1,43 @@
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{appTitle}}</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>{{appTitle}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  
+</head>
 
-  <body>
+<body>
 
-    {{{body}}}
-    <div class="nav">
+  {{{body}}}
+  <div class="nav">
     <nav id="navBar">
       <ul class="navText">
-          <a href="/" class="home">Home</a>
-          <a href="/signup" class="sign">Sign Up</a>
-          <a href="/login" class="login">Login</a>
-           {{#if isLoggedIn}}
-          {{isLoggedIn}}
-          <a href="/logout">Logout</a>
-          {{/if}}
-          {{#if isLoggedIn}}
-          {{isLoggedIn}}
-          {{/if}}
+        <img class="homesymb" src="/images/home (2).png" alt="">
+        <a href="/" class="home">Home</a>
+        <img class="signupsymb" src="/images/add-user.png" alt="">
+        <a href="/signup" class="sign">Sign Up</a>
+        <img class="loginsymb" src="/images/userbest.png" alt="">
+        <a href="/login" class="login">Login</a>
+        <img class="logoutsymb" src="/images/exit.png" alt="">
+        <a href="/logout" class="logout">Logout</a>
+        {{#if isLoggedIn}}
+        {{isLoggedIn}}
+        <a href="/logout">Logout</a>
+        {{/if}}
+        {{#if isLoggedIn}}
+        {{isLoggedIn}}
+        {{/if}}
 
       </ul>
     </nav>
-    </div>
-    <script src="/js/script.js"></script>
-  </body>
+  </div>
 
+  
+  
+  
+  <script src="/js/script.js"></script>
+  
+</body>

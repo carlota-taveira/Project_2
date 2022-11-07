@@ -9,7 +9,7 @@ router.get("/edit_profile", (req, res, next) => {
 });
 
 router.post('/edit_profile', fileUploader.single('image'), async (req, res, next) => {
-    const { username, email, password } = req.body;
+    const { username, email, password, firstname, lastname, mobilenumber, country, bio,} = req.body;
     try {
         let imageUrl;
 
@@ -19,7 +19,7 @@ router.post('/edit_profile', fileUploader.single('image'), async (req, res, next
             imageUrl = ''
         }
 
-        const updateProfile = await User.create({ username, email, password, imageUrl });
+        const updateProfile = await User.findByIdAndUpdate({ username, email, password, firstname, lastname, mobilenumber, country, bio, imageUrl });
         res.redirect('/profile');
     } catch (error) {
         console.log(error);

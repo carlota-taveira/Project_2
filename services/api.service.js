@@ -6,6 +6,5 @@ axios.get("https://newsdata.io/api/1/news?apikey=pub_13105a4c6d8098baac0485e9f0d
     .then(response => {
         console.log(response.data.results[0].title);
     })
-
-
  */
+

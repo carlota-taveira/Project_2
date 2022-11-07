@@ -6,7 +6,7 @@ const newsSchema = new Schema({
     pubDate: Number,
     category: String,
     country: String,
-    languange: String,
+    language: String,
     cast: [{ type: Schema.Types.ObjectId, ref: "User" }]
 
 },

@@ -19,16 +19,19 @@
         {{!-- <img class="logo" src="/images/ihn-low-resolution-logo-color-on-transparent-background.png" alt=""> --}}
         <img class="homesymb" src="/images/home (2).png" alt="">
         <a href="/" class="home">Home</a>
-        <img class="signupsymb" src="/images/add-user.png" alt="">
         {{#if loggedUser}}
+        <img class="loginsymb" src="/images/userbest.png" alt="">
+        <a href="/profile." class="profile">Profile</a>
+        <img class="logoutsymb" src="/images/exit.png" alt="">
         <a href="/logout" class="logout">Logout</a>
-        <a href="/profile" class="profile">profile</a>
+        
 
         {{else}}
+        <img class="signupsymb" src="/images/add-user.png" alt="">
         <a href="/signup" class="sign">Sign Up</a>
         <img class="loginsymb" src="/images/userbest.png" alt="">
         <a href="/login" class="login">Login</a>
-        <img class="logoutsymb" src="/images/exit.png" alt="">
+        
         {{/if}} 
 
       </ul>

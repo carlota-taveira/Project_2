@@ -500,6 +500,12 @@ hr{
   color: white;
 }
 
+.profile{
+  padding-right: 10px;
+  font-size: small;
+  color: white;
+}
+
 :root {
   --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
 }
@@ -584,7 +590,7 @@ hr{
   font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 0.8rem;
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: 1rem;
   padding: .75rem 1.2rem;
   text-align: center;
   text-decoration: none #6B7280 solid;

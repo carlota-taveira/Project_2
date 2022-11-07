@@ -1,17 +1,18 @@
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const newsSchema = new Schema({
-    title: String, 
+    title: String,
     description: String,
     pubDate: Number,
     category: String,
     country: String,
-    cast: [{type: Schema.Types.ObjectId, ref:"User"}]
+    language: String,
+    cast: [{ type: Schema.Types.ObjectId, ref: "User" }]
 
-}, 
-{
-    timestamps: true,
-})
+},
+    {
+        timestamps: true,
+    })
 
 const Article = model("User", newsSchema)
 

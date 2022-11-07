@@ -64,7 +64,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       return User.create({ username, email, password: hashedPassword });
     })
     .then((user) => {
-      res.redirect("/profile");
+      res.redirect(`/profile/${user._id}`);
     })
     .catch((error) => {
       if (error instanceof mongoose.Error.ValidationError) {
@@ -80,16 +80,16 @@ router.post("/signup", isLoggedOut, (req, res) => {
     });
 });
 
-// GET /auth/login
+
 router.get("/login", isLoggedOut, (req, res) => {
   res.render("auth/login");
 });
 
-// POST /auth/login
+
 router.post("/login", isLoggedOut, (req, res, next) => {
   const { username, email, password } = req.body;
 
-  // Check that username, email, and password are provided
+
   if (username === "" || email === "" || password === "") {
     res.status(400).render("auth/login", {
       errorMessage:
@@ -99,18 +99,15 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     return;
   }
 
-  // Here we use the same logic as above
-  // - either length based parameters or we check the strength of a password
   if (password.length < 6) {
     return res.status(400).render("auth/login", {
       errorMessage: "Your password needs to be at least 6 characters long.",
     });
   }
 
-  // Search the database for a user with the email submitted in the form
+
   User.findOne({ email })
     .then((user) => {
-      // If the user isn't found, send an error message that user provided wrong credentials
       if (!user) {
         res
           .status(400)
@@ -118,7 +115,6 @@ router.post("/login", isLoggedOut, (req, res, next) => {
         return;
       }
 
-      // If user is found based on the username, check if the in putted password matches the one saved in the database
       bcrypt
         .compare(password, user.password)
         .then((isSamePassword) => {
@@ -131,8 +127,10 @@ router.post("/login", isLoggedOut, (req, res, next) => {
 
           // Add the user object to the session object
           req.session.currentUser = user.toObject();
+          req.app.locals.loggedUser = user.toObject();
           // Remove the password field
           delete req.session.currentUser.password;
+          delete req.app.locals.loggedUser.password;
 
           res.redirect(`/profile/${req.session.currentUser._id}`);
         })
@@ -141,19 +139,8 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     .catch((err) => next(err));
 });
 
-// GET /auth/logout
 router.get("/logout", isLoggedIn, (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      res.status(500).render("auth/logout", { errorMessage: err.message });
-      return;
-    }
-
-    res.redirect("/");
-  });
-});
-
-router.get("/logout", isLoggedIn, (req, res) => {
+  req.app.locals.loggedUser = false;
   req.session.destroy((err) => {
     if (err) {
       res.status(500).render("auth/logout", { errorMessage: err.message });

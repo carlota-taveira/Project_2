@@ -7,7 +7,8 @@ const router = express.Router();
 const User = require("../models/User.model");
 
 router.get("/profile/:id", (req, res, next) => {
-  res.render("profile/profile");
+  const userId = req.params.id
+  res.render("profile/profile", {userId});
 });
 
 

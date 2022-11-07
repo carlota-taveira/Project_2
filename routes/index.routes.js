@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const app = require('../app');
-const { response } = require('../app');
 const Article = require("../models/Article.model");
 
 /* GET home page */

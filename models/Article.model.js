@@ -14,6 +14,6 @@ const newsSchema = new Schema({
         timestamps: true,
     })
 
-const Article = model("User", newsSchema)
+const Article = model("Article", newsSchema)
 
 module.exports = Article;

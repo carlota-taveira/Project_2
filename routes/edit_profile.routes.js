@@ -3,24 +3,39 @@ const router = express.Router();
 const isLoggedIn = require('../middleware/isLoggedIn');
 const User = require("../models/User.model");
 const fileUploader = require('../config/cloudinary.config');
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
-router.get("/edit_profile", (req, res, next) => {
-    res.render("profile/edit_profile");
+router.get("/edit_profile/:id", (req, res, next) => {
+    const userId = req.params.id
+    res.render("profile/edit_profile", { userId });
 });
 
-router.post('/edit_profile', fileUploader.single('image'), async (req, res, next) => {
-    const { username, email, password, firstname, lastname, mobilenumber, country, bio,} = req.body;
+router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, next) => {
+    const userId = req.params.id
+    const { username, email, password, firstname, lastname, mobilenumber, country, bio } = req.body;
     try {
-        let imageUrl;
+        let imgUrl;
 
         if (req.file) {
-            imageUrl = req.file.path;
+            imgUrl = req.file.path;
         } else {
-            imageUrl = ''
+            imgUrl = ''
         }
 
-        const updateProfile = await User.findByIdAndUpdate({ username, email, password, firstname, lastname, mobilenumber, country, bio, imageUrl });
-        res.redirect('/profile');
+
+
+        bcrypt
+            .genSalt(saltRounds)
+            .then((salt) => bcrypt.hash(password, salt))
+            .then((hashedPassword) => {
+                // Create a user and save it in the database
+                return User.findByIdAndUpdate(userId, { username, email, password: hashedPassword, firstname, lastname, mobilenumber, country, bio, imgUrl });
+            })
+
+
+
+        res.redirect(`/profile/${userId}`);
     } catch (error) {
         console.log(error);
         next(error);

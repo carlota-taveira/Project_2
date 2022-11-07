@@ -13,7 +13,7 @@ router.get("/edit_profile/:id", (req, res, next) => {
 
 router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, next) => {
     const userId = req.params.id
-    const { username, email, password, firstname, lastname, mobilenumber, country, bio } = req.body;
+    const { username, email, firstname, lastname, mobilenumber, country, bio } = req.body;
     try {
         let imgUrl;
 
@@ -25,13 +25,10 @@ router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, 
 
 
 
-        bcrypt
-            .genSalt(saltRounds)
-            .then((salt) => bcrypt.hash(password, salt))
-            .then((hashedPassword) => {
+        
                 // Create a user and save it in the database
-                return User.findByIdAndUpdate(userId, { username, email, password: hashedPassword, firstname, lastname, mobilenumber, country, bio, imgUrl });
-            })
+            await User.findByIdAndUpdate(userId, { username, email, firstname, lastname, mobilenumber, country, bio, imgUrl });
+        
 
 
 

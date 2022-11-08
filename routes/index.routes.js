@@ -9,7 +9,7 @@ router.get("/", (req, res, next) => {
 
   axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
     .then(response => {
-      console.log(response.data.results[0].multimedia[0].url)
+      console.log(response.data.results)
       res.render("index", { results: response.data.results });
     })
 

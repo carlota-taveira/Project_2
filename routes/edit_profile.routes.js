@@ -11,7 +11,7 @@ router.get("/edit_profile/:id", (req, res, next) => {
     res.render("profile/edit_profile", { userId });
 });
 
-router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, next) => {
+/* router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, next) => {
     const userId = req.params.id
     const { username, email, firstname, lastname, mobilenumber, country, bio } = req.body;
     try {
@@ -37,7 +37,7 @@ router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, 
         console.log(error);
         next(error);
     }
-});
+}); */
 
 
 module.exports = router;

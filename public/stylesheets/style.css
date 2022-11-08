@@ -17,13 +17,75 @@ h1 {
 .container{
   min-height:860px;
   max-height: 920px;
-  
-  /* background-color:#ffffff5b;  */
+  background-color: white;
+  /* background-image: url("/images/backwhite.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
   color:#fff;
   text-align: center;
   display: flex;
   flex-direction: column;
     align-items: center;
+}
+
+.form-control-file{
+  color: white;
+  /* align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  width: 100px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer; */
+  
+  
+}
+
+.form-group5{
+  padding-left: 225px;
+}
+
+#first_name{
+color: white;
+background-color: black;
+}
+
+#last_name{
+  color: white;
+  background-color: black;
+}
+
+#country{
+  color: white;
+  background-color: black;
+}
+
+#bio{
+  color: white;
+  background-color: black;
+}
+
+.form-control-file{
+  
+}
+
+
+
+.titleEditprof{
+  color: black;
 }
 
 #password{
@@ -64,15 +126,16 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  box-shadow: 0 6px 20px 10px rgb(10, 14, 108);
+  /* box-shadow: 0 6px 20px 10px rgb(10, 14, 108); */
+  box-shadow: 0 5px 75px 5px rgb(0, 0, 0);
 }
 
 .button-64 {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+ /*  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
   border: 0;
   border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+ /*  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px; */
   box-sizing: border-box;
   color: #FFFFFF;
   display: flex;
@@ -89,24 +152,28 @@ h1 {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  background-color: rgb(0, 0, 0);
 }
 
 .button-64:active,
 .button-64:hover {
   outline: 0;
+  /* background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
 }
 
 .button-64 span {
-  background-color: rgb(5, 6, 45);
+  background-color: rgb(0, 0, 0);
   padding: 16px 24px;
   border-radius: 6px;
   width: 100%;
   height: 100%;
   transition: 300ms;
+  /* background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
 }
 
 .button-64:hover span {
   background: none;
+  /* background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
 }
 
 @media (min-width: 768px) {
@@ -124,8 +191,10 @@ body {
 	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   color:white;
   font-size:12px;
+  background-color: white
   /* background:#333 url(/images/classy_fabric.png) */;
-  background-image: url("https://webunwto.s3.eu-west-1.amazonaws.com/styles/slider/s3/2021-03/slider-un-tourism-news.jpg?VersionId=QU9aGcui.I2bST63E7FHPA00otBMy6IG&itok=BuxPUK22");
+  /* background-image: url("https://webunwto.s3.eu-west-1.amazonaws.com/styles/slider/s3/2021-03/slider-un-tourism-news.jpg?VersionId=QU9aGcui.I2bST63E7FHPA00otBMy6IG&itok=BuxPUK22"); */
+  /* background-image: url("https://static.vecteezy.com/system/resources/previews/001/874/132/original/abstract-geometric-white-background-free-vector.jpg"); */
   background-position: -220px;
 }
 
@@ -137,7 +206,8 @@ form {
   border:0.5px solid #918e8e;
   overflow:hidden;
   position:relative;
-  box-shadow: 0 8px 10px 5px rgb(28, 5, 71);
+  /* box-shadow: 0 5px 75px 5px rgb(16, 31, 198); */
+  box-shadow: 0 5px 75px 5px rgb(0, 0, 0);
 }
 
 form:after {
@@ -335,7 +405,7 @@ a {color: white;}
 .editProfile{
   background-color: #111827;
   border: 1px solid transparent;
-  border-radius: .75rem;
+  /* border-radius: .75rem; */
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
@@ -432,7 +502,8 @@ a {color: white;}
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  box-shadow: 0 1px 25px 10px rgb(10, 14, 108);
+  /* box-shadow: 0 1px 25px 10px rgb(10, 14, 108); */
+  box-shadow: 0 5px 25px 5px rgb(0, 0, 0);
   margin: 0 auto;
   
 }
@@ -457,6 +528,7 @@ a {color: white;}
   font-size: larger;
   font-weight: bolder;
   width: 100%;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
 }
 
@@ -478,7 +550,8 @@ a {color: white;}
 }
 
 hr{
-  box-shadow: 0 12px 20px 2px rgb(10, 14, 108);
+  /* box-shadow: 0 12px 20px 2px rgb(10, 14, 108); */
+  box-shadow: 0 5px 75px 5px rgb(0, 0, 0);
 }
 
 
@@ -568,7 +641,8 @@ hr{
 }
 
 .card{
-  box-shadow: 0 12px 20px 10px rgb(10, 14, 108);
+  /* box-shadow: 0 12px 20px 10px rgb(10, 14, 108); */
+  box-shadow: 0 5px 75px 5px rgb(0, 0, 0);
 }
 
 .logo{
@@ -583,7 +657,7 @@ hr{
 .viewArticle{
   background-color: #111827;
   border: 0.5px solid transparent;
-  border-radius: 2.75rem;
+  /* border-radius: 2.75rem; */
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
@@ -624,4 +698,20 @@ hr{
 
 .loginTextee{
   color: white;
+  background-color: black;
 }
+
+.form-group1{
+  width: 82px;
+}
+
+.form-group2{
+  width: 300px;
+  margin: 0 auto;
+}
+
+
+
+
+
+

@@ -5,7 +5,7 @@ const app = require('../app');
 
 /*  router.get("/news", (req, res, next) => {
 
-  axios.get("https://newsdata.io/api/1/news?apikey=pub_13105a4c6d8098baac0485e9f0d09578944ac&language=en")
+  axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
      .then(response => { 
   res.render("news", { result: response.data.results }) ;
 })
@@ -14,7 +14,7 @@ const app = require('../app');
 
 router.get("/news/:id", (req, res, next) => {
     const newsId = req.params.id
-    axios.get("https://newsdata.io/api/1/news?apikey=pub_13105a4c6d8098baac0485e9f0d09578944ac&language=en")
+    axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
      .then(response => { 
   res.render("news", { result: response.data.results } );
 })

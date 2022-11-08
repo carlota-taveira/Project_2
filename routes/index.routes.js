@@ -9,8 +9,6 @@ router.get("/", (req, res, next) => {
 
   axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
     .then(response => {
-      /*  let news2 = response.data.results.filter((el) => el.image_url != null)
-       console.log(news2)  */
       console.log(response.data.results[0].multimedia[0].url)
       res.render("index", { results: response.data.results });
     })

@@ -38,25 +38,30 @@
     <br>
 
 
-    <h2>Edit profile</h2>
+    <h2 class="titleEditprof">Edit profile</h2>
 
     <br>
     <img src="/images/avatartest.jpg" alt="Avatar" class="avatar">
     <br>
+     <div class="form-group5">
+                 <label for='image'>
+        <input type='file' name='imgUrl' class='form-control-file' />
+      </label>
+            </div>
     <br>
     <br>
 
 
     <div class="row">
         <div class="col-xs">
-            <div class="form-group">
+            <div class="form-group1">
                 <input type="text" name="firstname" id="first_name" class="form-control input-lg"
                     placeholder="First Name" tabindex="1">
             </div>
         </div>
         <div class="col-xs">
             <div class="form-group">
-                <input type="text" name="lastname" id="last_name" class="form-control input-lg2" placeholder="Last Name"
+                <input type="text" name="lastname" id="last_name" class="form-control input-lg" placeholder="Last Name"
                     tabindex="2">
             </div>
         </div>
@@ -65,7 +70,7 @@
         <input type="text" name="email" id="email" class="form-control input-lg" placeholder="Email Address"
             tabindex="3">
     </div> --}}
-    <br>
+    
     <div class="row">
 {{!--         <div class="col-xs">
             <div class="form-group">
@@ -86,12 +91,8 @@
             </div>
         </div> --}}
          <div class="col-xs">
-            <div class="form-group">
-                 <label for='image'>
-        Image:
-        <input type='file' name='imgUrl' class='form-control-file' />
-      </label>
-            </div>
+           
+            
         </div>
         {{!-- <div class="col-xs">
             <div class="form-group">
@@ -99,7 +100,7 @@
             </div>
         </div> --}}
         <div class="col-xs">
-            <div class="form-group">
+            <div class="form-group2">
                 <input type="text" name="country" id="country" placeholder="Country" tabindex="9">
             </div>
         </div>

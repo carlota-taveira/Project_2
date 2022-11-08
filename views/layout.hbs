@@ -16,24 +16,31 @@
 
     <nav id="navBar">
       <ul class="navText">
+        {{!-- <div class="eden">
+          Éden
+        </div> --}}
+        
+
+
+        <div>
         {{!-- <img class="logo" src="/images/ihn-low-resolution-logo-color-on-transparent-background.png" alt=""> --}}
-        <img class="homesymb" src="/images/home (2).png" alt="">
+        <img class="homesymb" src="/images/home (4) (1).png" alt="">
         <a href="/" class="home">Home</a>
         {{#if loggedUser}}
-        <img class="loginsymb" src="/images/userbest.png" alt="">
+        <img class="loginsymb" src="/images/NovoProjeto.png" alt="">
         <a href="" class="profile">Profile</a>
-        <img class="logoutsymb" src="/images/exit.png" alt="">
+        <img class="logoutsymb" src="/images/logOutPerfect.png" alt="">
         <a href="/logout" class="logout">Logout</a>
         
 
         {{else}}
-        <img class="signupsymb" src="/images/add-user.png" alt="">
+        <img class="signupsymb" src="/images/addFriendGood.png" alt="">
         <a href="/signup" class="sign">Sign Up</a>
-        <img class="loginsymb" src="/images/userbest.png" alt="">
+        <img class="loginsymb" src="/images/NovoProjeto.png" alt="">
         <a href="/login" class="login">Login</a>
         
         {{/if}} 
-
+        </div>
       </ul>
     </nav>
 

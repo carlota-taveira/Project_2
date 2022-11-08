@@ -37,6 +37,9 @@ app.use("/", profileRoutes);
 const editProfileRoutes = require("./routes/edit_profile.routes");
 app.use("/", editProfileRoutes);
 
+/* const newsRoutes = require("./routes/news.routes");
+app.use("/", newsRoutes); */
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

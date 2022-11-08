@@ -24,8 +24,6 @@ router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, 
         }
 
 
-
-        
                 // Create a user and save it in the database
             await User.findByIdAndUpdate(userId, { username, email, firstname, lastname, mobilenumber, country, bio, imgUrl });
         

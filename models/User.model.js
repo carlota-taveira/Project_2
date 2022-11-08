@@ -41,7 +41,8 @@ const userSchema = new Schema(
     },
     imgUrl: {
       type: String,
-    }
+    },
+    
     
   },
   {

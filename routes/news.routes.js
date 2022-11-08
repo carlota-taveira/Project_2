@@ -4,12 +4,11 @@ const axios = require('axios');
 const app = require('../app');
 
 
-router.post("/news/single", (req, res, next) => {
-  const newsId = req.params
+router.get("/news/", (req, res, next) => {
   axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
     .then(response => {
-      console.log(response.data.results[0].url)
-      res.render("news", { results: response.data.results[0].url, newsId });
+      console.log(response.data.results)
+      res.render("news", { results: response.data.results });
     })
 
 });

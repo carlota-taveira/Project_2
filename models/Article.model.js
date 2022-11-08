@@ -8,7 +8,6 @@ const newsSchema = new Schema({
     country: String,
     language: String,
     cast: [{ type: Schema.Types.ObjectId, ref: "User" }]
-
 },
     {
         timestamps: true,

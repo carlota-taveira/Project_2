@@ -432,7 +432,8 @@ a {color: white;}
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  box-shadow: 0 6px 20px 10px rgb(10, 14, 108);
+  box-shadow: 0 1px 25px 10px rgb(10, 14, 108);
+  margin: 0 auto;
   
 }
 
@@ -619,4 +620,8 @@ hr{
   .viewArticle {
     padding: .75rem 1.5rem;
   }
+}
+
+.loginTextee{
+  color: white;
 }

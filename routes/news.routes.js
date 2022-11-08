@@ -2,27 +2,22 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const app = require('../app');
+const Article = require("../models/Article.model");
 
-
-router.post("/news/single", (req, res, next) => {
-  const newsId = req.params
+router.get("/news/:id", (req, res, next) => {
   axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
     .then(response => {
-      console.log(response.data.results[0].url)
-      res.render("news", { results: response.data.results[0].url, newsId });
+      console.log(response.data.results.id)
+      res.render("news", { results: response.data.results.id });
     })
-
 });
 
-/* router.post('/news/:id', async (req, res, next) => {
-
-  try {
-    const newId = req.params.id
-    const { newId } = req.body;
-  } catch (error) {
-    console.log(error);
-    next(error);
-  }
-}); */
-
+router.get("/", (req, res, next) => {
+  axios.get("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=Wx5d2t0T8JQplkJsgtGKsjZMaKTNK8Ka")
+    .then(response => {
+      console.log(response.data.results)
+      res.render("index", { results: response.data.results });
+    })
+});
+ 
 module.exports = router; 

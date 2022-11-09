@@ -78,9 +78,7 @@ background-color: black;
   background-color: black;
 }
 
-.form-control-file{
-  
-}
+
 
 
 
@@ -573,12 +571,16 @@ a {color: white;}
 .btnViewArticle{
   border: none;
   
+  background-image: none;
+  background-color: #000000;
+  color: white;
+  
   
 }
 
 .btnViewArticle:hover{
   background-color: #000000;
-  color: white;
+  color: rgb(178, 167, 167);
   
 }
 
@@ -790,6 +792,7 @@ a {color: white;}
 
 .eden{
   color: white;
+  border: 2px solid rgb(255, 255, 255);
 
 }
 
@@ -839,6 +842,14 @@ html, body {
 
 
 
+#form5{
+  width: 110px;
+  border-radius: none;
+  background-image: none;
+}
 
-
+.hacker {
+ height: 200px;
+ overflow-y: hidden;
+}
 

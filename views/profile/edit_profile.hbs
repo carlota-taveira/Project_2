@@ -33,7 +33,7 @@
 --}}
 
 
-    <form action="/edit_profile/{{userId}}" method="POST">
+    <form action="/edit_profile/{{_id}}" method="POST" enctype="multipart/form-data">
 <div class="container">
     <br>
 
@@ -41,11 +41,12 @@
     <h2 class="titleEditprof">Edit profile</h2>
 
     <br>
-    <img src="/images/avatartest.jpg" alt="Avatar" class="avatar">
+    <img src="{{imgUrl}}" alt="Avatar" class="avatar">
     <br>
+    <input type="text" value="{{imgUrl}}" name="currentImg"  hidden>
      <div class="form-group5">
                  <label for='image'>
-        <input type='file' name='imgUrl' class='form-control-file' />
+        <input type='file' name='image' class='form-control-file' />
       </label>
             </div>
     <br>
@@ -56,13 +57,12 @@
         <div class="col-xs">
             <div class="form-group1">
                 <input type="text" name="firstname" id="first_name" class="form-control input-lg"
-                    placeholder="First Name" tabindex="1">
+                    placeholder="First Name" tabindex="1" value="{{firstname}}">
             </div>
         </div>
         <div class="col-xs">
             <div class="form-group">
-                <input type="text" name="lastname" id="last_name" class="form-control input-lg" placeholder="Last Name"
-                    tabindex="2">
+                <input type="text" name="lastname" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" value="{{lastname}}">
             </div>
         </div>
     </div>
@@ -101,12 +101,12 @@
         </div> --}}
         <div class="col-xs">
             <div class="form-group2">
-                <input type="text" name="country" id="country" placeholder="Country" tabindex="9">
+                <input type="text" name="country" id="country" placeholder="Country" tabindex="9" value="{{country}}">
             </div>
         </div>
         <div class="col-xs2">
             <div class="form-group">
-                <input type="text" name="bio" id="bio" placeholder="BIO" tabindex="10">
+                <input type="text" name="bio" id="bio" placeholder="BIO" tabindex="10" value="{{bio}}">
             </div>
 
         </div>

@@ -6,21 +6,30 @@ const fileUploader = require('../config/cloudinary.config');
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-router.get("/edit_profile/:id", (req, res, next) => {
+router.get("/edit_profile/:id", async(req, res, next) => {
     const userId = req.params.id
-    res.render("profile/edit_profile", { userId });
+    try {  
+        const user = await User.findById(userId)
+        res.render("profile/edit_profile", user);
+    } catch (error) {
+        
+    }
+
+
 });
 
 router.post('/edit_profile/:id', fileUploader.single('image'), async (req, res, next) => {
     const userId = req.params.id
-    const { username, email, firstname, lastname, mobilenumber, country, bio } = req.body;
+
+    const { username, email, firstname, lastname, mobilenumber, country, bio , currentImg} = req.body;
     try {
         let imgUrl;
 
         if (req.file) {
             imgUrl = req.file.path;
+            console.log(req.file.path)
         } else {
-            imgUrl = ''
+            imgUrl = currentImg
         }
 
 

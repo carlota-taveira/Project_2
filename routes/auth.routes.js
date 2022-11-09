@@ -127,7 +127,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
 
           // Add the user object to the session object
           req.session.currentUser = user.toObject();
-          req.app.locals.loggedUser = user.toObject();
+          req.app.locals.loggedUser = user
           // Remove the password field
           delete req.session.currentUser.password;
           delete req.app.locals.loggedUser.password;

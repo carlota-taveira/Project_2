@@ -108,7 +108,7 @@
                         <hr>
                         <p class="card-text">{{abstract}}</p>     
                         {{#if ../loggedUser}}
-                      <form action="/news/article" method="post">
+                      <form action="/news/article" id="formCss" method="post">
                         <input type="text" value="{{url}}" name="url" hidden>
                      <button class="btnViewArticle" type="submit">Visit Article </button>
                      {{/if}}

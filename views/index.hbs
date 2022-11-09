@@ -66,7 +66,6 @@
       <section class="cards">  
 
     <div class="container mx-auto mt-4">
-
  {{#each results}}
             {{#if @first}}
         <div class="row">
@@ -103,20 +102,211 @@
                         <h4 class="text"># {{section}} </h4>
                         <hr>
                         <p class="card-text">{{abstract}}</p>     
-                        {{#if ../loggedUser}}
-                      <form action="/news/article" method="post">
-                        <input type="text" value="{{uri}}" name="uri" hidden>
-                     <button class="btnViewArticle" type="submit">Visit Article </button>
-                        </form>
+                        {{#if loggedUser}}
+                     <a href="{{url}}"> <button class="btnViewArticle" type="submit"></i> Visit Article </button></a>
                          {{/if}}
                     </div>
                          
                 </div>
                 </div>
-       
+                     {{/if}}
 
         {{/each}}
-           
+            {{!-- </div>
+            {{#each results}}
+            {{#if last}}
+            <div class="col-md-4">
+                <div class="card" style="width: 15rem;">
+                    <img src="{{multimedia.0.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+              {{else}}
+            {{/if}}
+
+        {{/each}}
+
+            <hr> --}}
+
+          {{!--   <div class="col-md-4">
+                <div class="card" style="width: 15rem;">
+                    <img src="{{multimedia.0.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 15rem;">
+                    <img src="{{multimedia.0.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+          <div class="col-md-4">
+                <div class="card" style="width: 15rem;">
+                    <img src="{{multimedia.0.url}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <img src="/images/news.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <img src="/images/news.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <img src="/images/news.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <img src="/images/news.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <img src="/images/news.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 22rem;">
+                    <img src="/images/news.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">"Neque porro quisquam est qui dolorem"</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">November 5, 2022. 5:00:05 PM</h6>
+                        <hr>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Article</a>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+ --}}   
     </section>  
 
             
@@ -126,8 +316,3 @@
 </body>
 
 </html>
-
-
-
-
-     

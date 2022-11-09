@@ -42,6 +42,7 @@ const userSchema = new Schema(
     imgUrl: {
       type: String,
     },
+    favourites: [{type: Schema.Types.ObjectId, ref: "Article"}]
     
     
   },

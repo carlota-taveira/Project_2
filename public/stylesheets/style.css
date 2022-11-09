@@ -196,6 +196,7 @@ body {
   background-position: -220px;
 }
 
+/*
 form {
  	background:#111; 
   width:600px;
@@ -204,8 +205,8 @@ form {
   border:0.5px solid #918e8e;
   overflow:hidden;
   position:relative;
-  /* box-shadow: 0 5px 75px 5px rgb(16, 31, 198); */
-  /* box-shadow: 0 5px 75px 5px rgb(0, 0, 0); */
+  box-shadow: 0 5px 75px 5px rgb(16, 31, 198);
+  box-shadow: 0 5px 75px 5px rgb(0, 0, 0);
 }
 
 form:after {
@@ -229,7 +230,7 @@ form:before {
   left:34%;
   top:-7px;
   box-shadow: 0 0 6px 4px #fff; 
-}
+}*/
 
 .inset {
  	padding:20px; 
@@ -570,18 +571,28 @@ a {color: white;}
 
 .btnViewArticle{
   border: none;
-  
+  padding: 10px 20px;
+  border-radius: none;
   background-image: none;
   background-color: #000000;
   color: white;
-  
-  
 }
 
-.btnViewArticle:hover{
+.btnViewArticle7{
+  border: none;
+  padding: 5px 10px;
+  border-radius: none;
+  background-image: none;
   background-color: #000000;
-  color: rgb(178, 167, 167);
-  
+  color: white;
+}
+
+.btnViewArticle:hover {
+  background-color: #414040;
+}
+
+.btnViewArticle7:hover {
+  background-color: #414040;
 }
 
 .body_alt{
@@ -777,8 +788,8 @@ a {color: white;}
 }
 
 .loginTextee{
-  color: white;
-  background-color: black;
+  color: black
+  
 }
 
 .form-group1{
@@ -849,14 +860,61 @@ html, body {
 }
 
 .hacker {
- height: 200px;
+ height: 210px;
  overflow-y: hidden;
 }
 
 .card-body{
   max-width: 320px;
+  
 }
 
-#formCss{
-  max-width: 100px;
+.card-body5{
+  max-width: 520px;
+  
 }
+
+
+#imgFav{
+  max-width: 100%;
+  max-height: 420px;
+}
+
+.newsDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textNews{
+  max-width: 350px;
+}
+
+#cardNews{
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.formLogin{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  
+
+}
+
+.imgLogin{
+  
+  width: 700px;
+  height: 590px;
+  margin-left: 100px;
+}
+
+#go{
+  background-color: black;
+}
+
+

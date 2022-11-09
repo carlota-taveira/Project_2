@@ -1,13 +1,19 @@
 
-
+<div class="newsDiv">
+<div class="card" id="cardNews"  style="width: 30rem;">
 <h1>{{title}}</h1>
- <img src="{{multimedia.0.url}}">
-<p>{{abstract}}</p>
+<br>
+ <img id="imgFav" src="{{multimedia.0.url}}">
+ <br>
+<p class="textNews">{{abstract}}</p>
 
-<form action="/news/favourite" method="post">
+<form action="/news/favourite" method="post" id="formCss">
   <input type="text" value="{{uri}}" name="uri" hidden>
-  <button class="btnViewArticle" type="submit">Add to favourites </button>
+  <button class="btnViewArticle" type="submit">☆ Favourites </button>
 </form>
+</div>
+</div>
+</div>
 
 
 

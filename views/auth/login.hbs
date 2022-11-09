@@ -1,13 +1,13 @@
 <br>
 <br>
-<br>
 
 
 
 
-<div id="login-form">
+
+<div id="login-form7">
   {{!-- <h2>Log In</h2> --}}
-  <form action="/login" method="POST">
+  <form action="/login" method="POST" class="formLogin">
 
     {{!-- <label> Email
       <input type="email" name="email" placeholder="Your email" />
@@ -19,29 +19,32 @@
 
     <button type="submit">Log In</button> --}}
 
-    <h1 class="loginTextee">Login</h1>
+    <h1 class="loginTextee"></h1>
     <div class="inset">
       <p>
-        <label for="email" class="loginTextee">EMAIL ADDRESS</label>
+        <label for="email" class="loginTextee">Email</label>
         <input type="text" name="email" id="gdeml">
       </p>
       <p>
-        <label for="password" class="loginTextee">PASSWORD</label>
+        <label for="password" class="loginTextee">Password</label>
         <input type="password" name="password" id="goodpss">
       </p>
       <p>
-        <input type="checkbox" name="remember" id="remember">
-        <label for="remember">Remember me for 14 days</label>
+        
+        <input type="submit" name="go" id="go" value="Log in">
       </p>
     </div>
-    <p class="p-container">
-      <span >Forgot password ?</span>
-      <input type="submit" name="go" id="go" value="Log in">
-    </p>
-
+    
+    <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="/images/loginart.jpeg"
+          alt="Login image" class="imgLogin" style="object-fit: cover; object-position: left;">
+      </div>
 
     {{#if errorMessage}}
     <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>
+
+
+

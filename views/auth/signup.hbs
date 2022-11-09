@@ -21,35 +21,49 @@
 
 <br>
 <br>
-<br>
-<br>
 
 
 
 
-<div id="form">
-  {{!-- <h2>Sign Up</h2> --}}
-  <form action="/signup" method="POST">
 
-    <h1 class="loginTextee">Sign Up</h1>
+<div id="login-form7">
+  {{!-- <h2>Log In</h2> --}}
+  <form action="/signup" method="POST" class="formLogin">
+
+    {{!-- <label> Email
+      <input type="email" name="email" placeholder="Your email" />
+    </label>
+
+    <label> Password
+      <input type="password" name="password" placeholder="Your password" />
+    </label>
+
+    <button type="submit">Log In</button> --}}
+
+    <h1 class="loginTextee"></h1>
     <div class="inset">
       <p>
-        <label for="email" class="loginTextee">eMAIL ADDRESS</label>
+        <label for="email" class="loginTextee">EMAIL ADDRESS</label>
         <input type="text" name="email" id="gdeml">
       </p>
       <p>
         <label for="password" class="loginTextee">PASSWORD</label>
         <input type="password" name="password" id="goodpss">
       </p>
+      <p>
+        
+        <input type="submit" name="go" id="go" value="Sign Up">
+      </p>
     </div>
-    <p class="p-container">
-      <input type="submit" name="go" id="go" value="Sign Up">
-    </p>
-
-
+    
+    <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="/images/signbw.jpg"
+          alt="Login image" class="imgLogin" style="object-fit: cover; object-position: left;">
+      </div>
 
     {{#if errorMessage}}
     <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>
+

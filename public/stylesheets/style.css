@@ -193,7 +193,7 @@ body {
   font-size:12px;
   background-color: white
   /* background:#333 url(/images/classy_fabric.png) */;
-  /* background-image: url("https://webunwto.s3.eu-west-1.amazonaws.com/styles/slider/s3/2021-03/slider-un-tourism-news.jpg?VersionId=QU9aGcui.I2bST63E7FHPA00otBMy6IG&itok=BuxPUK22"); */
+  background-image: url("https://webunwto.s3.eu-west-1.amazonaws.com/styles/slider/s3/2021-03/slider-un-tourism-news.jpg?VersionId=QU9aGcui.I2bST63E7FHPA00otBMy6IG&itok=BuxPUK22"); 
   /* background-image: url("https://static.vecteezy.com/system/resources/previews/001/874/132/original/abstract-geometric-white-background-free-vector.jpg"); */
   background-position: -220px;
 }
@@ -499,13 +499,34 @@ a {color: white;}
 .avatarProfile{
 
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+  
+  border: 5px solid rgb(0, 0, 0);
+  
   border-radius: 50%;
   /* box-shadow: 0 1px 25px 10px rgb(10, 14, 108); */
   /* box-shadow: 0 5px 25px 5px rgb(0, 0, 0); */
   margin: 0 auto;
   
+}
+
+#cardProfile{
+  border: 3px solid rgb(0, 0, 0);
+}
+
+#stFav{
+  border: 3px solid rgb(0, 0, 0);
+}
+
+#headerProfile{
+  background-color: #dcdcdc;
+}
+
+#favProfile{
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 45px;
 }
 
 .form-control{
@@ -768,7 +789,47 @@ hr{
 
 }
 
+* {
+  font-family: Google sans, Arial;
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  animation: colorSlide 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+
+  
+  }
+
+
+@keyframes colorSlide {
+  0% { background-color: #152a68; }
+  25% { background-color: rgb(214, 225, 65); }
+  50% { background-color: rgb(158, 37, 154); }
+  75% { background-color: tomato; }
+  100% { background-color: #15681b; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  };
+  100% {
+    opacity: 1;
+  }
+}
+
+.error{
+  font-size: 64px;
+}
 
 
 

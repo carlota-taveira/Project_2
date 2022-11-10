@@ -19,8 +19,8 @@
   </form>
 </div> --}}
 
-<br>
-<br>
+
+
 
 
 
@@ -56,6 +56,11 @@
 
             <input type="submit" name="go" id="go" value="Sign Up">
           </p>
+          
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
         </div>
       </div>
     </div>
@@ -65,9 +70,5 @@
         style="object-fit: cover; object-position: left;">
     </div>
 
-    {{#if errorMessage}}
-    <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
 
 </div>

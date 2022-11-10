@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #00b7ff;
+  color: #9da4a6;
 }
 
 h1 {
@@ -427,7 +427,7 @@ a {color: white;}
 }
 
 .editProfile:hover {
-  background-color: #192fae;
+  background-color: #868686;
   color: white;
 }
 
@@ -516,6 +516,7 @@ a {color: white;}
 
 #cardProfile{
   border: 3px solid rgb(0, 0, 0);
+  
 }
 
 #stFav{
@@ -636,7 +637,7 @@ a {color: white;}
 
 .card-link{
   text-decoration: none;
-  color: rgb(66, 109, 239);
+  color: rgb(151, 151, 151);
 }
 
 .card-link:hover{
@@ -830,11 +831,11 @@ html, body {
 
 
 @keyframes colorSlide {
-  0% { background-color: #152a68; }
-  25% { background-color: rgb(214, 225, 65); }
-  50% { background-color: rgb(158, 37, 154); }
-  75% { background-color: tomato; }
-  100% { background-color: #15681b; }
+  0% { background-color: #494848; }
+  25% { background-color: rgb(158, 158, 158); }
+  50% { background-color: rgb(90, 89, 89); }
+  75% { background-color: rgb(155, 155, 155); }
+  100% { background-color: #504f4f; }
 }
 
 @keyframes fadeIn {
@@ -909,12 +910,13 @@ html, body {
 .imgLogin{
   
   width: 700px;
-  height: 590px;
+  height: 520px;
   margin-left: 100px;
 }
 
 #go{
   background-color: black;
 }
+
 
 

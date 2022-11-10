@@ -1,10 +1,11 @@
 
 
 <body class="body_alt">
+    
 
     <div class="card" id="cardProfile" style="width: 28rem;">
         <div class="card-header" id="headerProfile">
-            <br>
+           
             <br>
             Profile
         </div>
@@ -39,6 +40,7 @@
             {{#each favourites}}
             
             <hr>
+            
             <p class="card-text">{{abstract}}</p>
             <form action="/news/article" method="post" id="formCss">
                 <input type="text" value="{{url}}" name="url" hidden>

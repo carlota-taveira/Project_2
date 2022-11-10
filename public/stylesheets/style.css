@@ -396,6 +396,18 @@ a {color: white;}
   font-size: small;
 }
 
+.login:hover{
+  color: rgb(181, 177, 177);
+}
+
+.sign:hover{
+  color: rgb(181, 177, 177);
+}
+
+.home:hover{
+  color: rgb(181, 177, 177);
+}
+
 .logout{
   padding-right: 10px;
   font-size: small;
@@ -521,6 +533,7 @@ a {color: white;}
 
 #stFav{
   border: 3px solid rgb(0, 0, 0);
+  
 }
 
 /* #headerProfile{
@@ -659,6 +672,7 @@ a {color: white;}
 
 .login{
   color: white;
+  
 }
 
 .logout{
@@ -917,6 +931,12 @@ html, body {
 #go{
   background-color: black;
 }
+
+.buttonsFav{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 
 

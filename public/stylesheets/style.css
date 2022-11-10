@@ -528,17 +528,23 @@ a {color: white;}
 
 #cardProfile{
   border: 3px solid rgb(0, 0, 0);
-  
+  margin-top: 100px;
+
 }
 
 #stFav{
   border: 3px solid rgb(0, 0, 0);
-  
+  margin-top: 85px;
+
 }
 
 /* #headerProfile{
   background-color: #dcdcdc;
 } */
+
+#favProfile{
+  font-size: 26px;
+}
 
 #favProfile{
   font-size: 26px;
@@ -554,7 +560,10 @@ a {color: white;}
 .textProf2{
   font-size: x-large;
 }
-
+/* .text {
+  font-size: 14px;
+  margin-bottom: 10px;
+} */
 .card{
   align-items: center;
   justify-content: center;
@@ -568,10 +577,10 @@ a {color: white;}
 
 
 .cardImg{
-  margin-top: 10px;
-  max-width: 280px;
+  margin-top: 100px;
+  max-width: 250px;
   /* min-width: 300px; */
-  max-height: 190px;
+  max-height: 115px;
   /* min-height: 190px; */
 }
 
@@ -582,10 +591,14 @@ a {color: white;}
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   
 }
+#txt-card {
+  margin-bottom: 70px;
+}
 
 .btnViewArticle{
   border: none;
-  padding: 10px 20px;
+  padding: 5px;
+  width: 50%;
   border-radius: none;
   background-image: none;
   background-color: #000000;
@@ -651,6 +664,7 @@ a {color: white;}
 .card-link{
   text-decoration: none;
   color: rgb(151, 151, 151);
+
 }
 
 .card-link:hover{
@@ -729,6 +743,19 @@ a {color: white;}
   
 }
 
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#img-car {
+  height: 700px;
+}
+#img-carr {
+  height: 700px;
+}
 .logoutsymb{
   width: 25px;
 }
@@ -788,6 +815,7 @@ a {color: white;}
 
 #cardId{
   outline: 1px solid black;
+  max-height: 450px;
 }
 
 .viewArticle:focus {
@@ -875,7 +903,7 @@ html, body {
 }
 
 .hacker {
- height: 210px;
+ height: 300px;
  overflow-y: hidden;
 }
 
@@ -916,6 +944,7 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
   
   
 
@@ -923,9 +952,9 @@ html, body {
 
 .imgLogin{
   
-  width: 700px;
-  height: 520px;
-  margin-left: 100px;
+  width: 100%;
+  height: 100%;
+  margin-left: 150px;
 }
 
 #go{
@@ -937,6 +966,13 @@ html, body {
   justify-content: space-evenly;
 }
 
+.card-body{
+  background-color: #ffffff;
+  border-radius: none;
+}
 
+.formLogin{
+  background-color: #000000;
+}
 
 

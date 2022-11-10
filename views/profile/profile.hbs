@@ -2,7 +2,7 @@
 
 <body class="body_alt">
     
-
+    
     <div class="card" id="cardProfile" style="width: 28rem;">
         <div class="card-header" id="headerProfile">
            
@@ -29,9 +29,12 @@
 
     <div class="card" id="stFav" style="width: 45rem;">
         <div class="card-body5">
-            <br>
-            <br>
-            <h5 class="card-header2" id="favProfile">Favourites Articles</h5>
+            
+             <div class="card-header" id="headerProfile">
+           
+            
+            Favourites
+        </div>
             
         </div>
     
@@ -42,13 +45,15 @@
             <hr>
             
             <p class="card-text">{{abstract}}</p>
+            <div class="buttonsFav">
             <form action="/news/article" method="post" id="formCss">
                 <input type="text" value="{{url}}" name="url" hidden>
                 <button class="btnViewArticle7" type="submit">Visit article </button>
             </form>
             <form action="/news/remove/{{_id}}" method="post" id="formCss" >
-                <button class="btnViewArticle7" type="submit">Delete </button>
+                <button class="btnViewArticle7" type="submit">🗑 Delete </button>
             </form>
+            </div>
 
             {{/each}}
             

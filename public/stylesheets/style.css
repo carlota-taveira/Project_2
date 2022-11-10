@@ -20,10 +20,6 @@ a {
   color: #9da4a6;
 }
 
-h3 {
-  width: 200px;
-}
-
 h1 {
   color: 15px;
 }
@@ -374,11 +370,11 @@ ul {
   width: 100%;
   display: flex; 
   align-items: center; 
-  justify-content: flex-end;
-/*   padding-right: 30px; */
+  justify-content: space-between;
+  padding-right: 30px;
   font-size:medium;
   font-weight: bold;
- /*  position: fixed; */
+  position: fixed;
    top: 0;
    z-index: 2;
 
@@ -423,6 +419,14 @@ a {color: white;}
 }
 
 .home:hover{
+  color: rgb(181, 177, 177);
+}
+
+.profile:hover{
+  color: rgb(181, 177, 177);
+}
+
+.logout:hover{
   color: rgb(181, 177, 177);
 }
 
@@ -546,7 +550,7 @@ a {color: white;}
 
 #cardProfile{
   border: 3px solid rgb(0, 0, 0);
-  margin-top: 100px;
+  margin-top: 85px;
 
 }
 
@@ -556,9 +560,7 @@ a {color: white;}
 
 }
 
-/* #headerProfile{
-  background-color: #dcdcdc;
-} */
+
 
 #favProfile{
   font-size: 26px;
@@ -616,7 +618,7 @@ a {color: white;}
 .btnViewArticle{
   border: none;
   padding: 5px;
-  width: 50%;
+  width: 100%;
   border-radius: none;
   background-image: none;
   background-color: #000000;
@@ -642,7 +644,7 @@ a {color: white;}
 
 .body_alt{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   
@@ -1004,6 +1006,10 @@ html, body {
 
 .formLogin{
   background-color: #000000;
+}
+
+#formCss{
+  margin: 10px;
 }
 
 

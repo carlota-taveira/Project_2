@@ -1,0 +1,131 @@
+{{!-- <div id="profile-form">
+    <h2>Add name</h2>
+    <form action="/" method="POST">
+
+        <label> BIO
+            <input type="text" name="preferences" placeholder="Your preferences" />
+        </label>
+
+        <button type="submit">Add</button>
+
+        <label> Edit password
+            <input type="password" name="password" placeholder="Your password" />
+        </label>
+
+        <button type="submit">Save changes</button>
+
+        <label> Location
+            <input type="password" name="Location" placeholder="Your location" />
+        </label>
+
+        <button type="submit">Save changes</button>
+
+
+
+
+
+
+
+
+
+    </form>
+</div>
+--}}
+
+
+    <form action="/edit_profile/{{_id}}" method="POST" enctype="multipart/form-data">
+<div class="container">
+    <br>
+
+
+    <h2 class="titleEditprof">Edit profile</h2>
+
+    <br>
+    <img src="{{imgUrl}}" alt="Avatar" class="avatar">
+    <br>
+    <input type="text" value="{{imgUrl}}" name="currentImg"  hidden>
+     <div class="form-group5">
+                 <label for='image'>
+        <input type='file' name='image' class='form-control-file' />
+      </label>
+            </div>
+    <br>
+    <br>
+ 
+
+    <div class="row">
+        <div class="col-xs">
+            <div class="form-group1">
+                <input type="text" name="firstname" id="first_name" class="form-control input-lg"
+                    placeholder="First Name" tabindex="1" value="{{firstname}}">
+            </div>
+        </div>
+        <div class="col-xs">
+            <div class="form-group">
+                <input type="text" name="lastname" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" value="{{lastname}}">
+            </div>
+        </div>
+    </div>
+    {{!-- <div class="form-group">
+        <input type="text" name="email" id="email" class="form-control input-lg" placeholder="Email Address"
+            tabindex="3">
+    </div> --}}
+    
+    <div class="row">
+{{!--         <div class="col-xs">
+            <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control input-lg"
+                    placeholder="Password" tabindex="5">
+            </div>
+        </div> --}}
+        {{!-- <div class="col-xs">
+            <div class="form-group">
+                <input type="password" name="password_confirmation" id="password_confirmation"
+                    class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+            </div>
+        </div> --}}
+        {{!-- <div class="col-xs">
+            <div class="form-group">
+                <input type="password" name="password" id="password_change" placeholder="New Password"
+                    tabindex="7">
+            </div>
+        </div> --}}
+         <div class="col-xs">
+           
+            
+        </div>
+        {{!-- <div class="col-xs">
+            <div class="form-group">
+                <input type="string" name="mobilenumber" id="" placeholder="Mobile Number" tabindex="8">
+            </div>
+        </div> --}}
+        <div class="col-xs">
+            <div class="form-group2">
+                <input type="text" name="country" id="country" placeholder="Country" tabindex="9" value="{{country}}">
+            </div>
+        </div>
+        <div class="col-xs2">
+            <div class="form-group">
+                <input type="text" name="bio" id="bio" placeholder="BIO" tabindex="10" value="{{bio}}">
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <br>
+    <div class="row">
+        <div class="col-xs-12 col-md-6"></div>
+        <button type="submit" class="button-64" role="button"><span class="text">Save changes</span></button>
+    </div>
+    <br>
+    <br>
+    </form>
+</div>
+</div>
+
+
+</body>
+
+</html>

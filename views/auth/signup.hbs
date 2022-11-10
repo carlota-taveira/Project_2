@@ -1,10 +1,6 @@
-<div id="form">
+{{!-- <div id="form">
   <h2>Sign Up</h2>
-  <form action="/auth/signup" method="POST">
-
-    <label> Username
-      <input type="text" name="username" placeholder="Your username" />
-    </label>
+  <form action="/signup" method="POST">
 
     <label> Email
       <input type="email" name="email" placeholder="Your email" />
@@ -18,7 +14,55 @@
 
 
     {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div> --}}
+
+<br>
+<br>
+
+
+
+
+
+<div id="login-form7">
+  {{!-- <h2>Log In</h2> --}}
+  <form action="/signup" method="POST" class="formLogin">
+
+    {{!-- <label> Email
+      <input type="email" name="email" placeholder="Your email" />
+    </label>
+
+    <label> Password
+      <input type="password" name="password" placeholder="Your password" />
+    </label>
+
+    <button type="submit">Log In</button> --}}
+
+    <h1 class="loginTextee"></h1>
+    <div class="inset">
+      <p>
+        <label for="email" class="loginTextee">Email</label>
+        <input type="text" name="email" id="gdeml">
+      </p>
+      <p>
+        <label for="password" class="loginTextee">Password</label>
+        <input type="password" name="password" id="goodpss">
+      </p>
+      <p>
+        
+        <input type="submit" name="go" id="go" value="Sign Up">
+      </p>
+    </div>
+    
+    <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img src="/images/signbewgood.jpg"
+          alt="Login image" class="imgLogin" style="object-fit: cover; object-position: left;">
+      </div>
+
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
 </div>

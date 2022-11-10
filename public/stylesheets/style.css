@@ -419,6 +419,14 @@ a {color: white;}
   color: rgb(181, 177, 177);
 }
 
+.profile:hover{
+  color: rgb(181, 177, 177);
+}
+
+.logout:hover{
+  color: rgb(181, 177, 177);
+}
+
 .logout{
   padding-right: 10px;
   font-size: small;
@@ -549,9 +557,7 @@ a {color: white;}
 
 }
 
-/* #headerProfile{
-  background-color: #dcdcdc;
-} */
+
 
 #favProfile{
   font-size: 26px;
@@ -609,7 +615,7 @@ a {color: white;}
 .btnViewArticle{
   border: none;
   padding: 5px;
-  width: 50%;
+  width: 100%;
   border-radius: none;
   background-image: none;
   background-color: #000000;
@@ -984,6 +990,10 @@ html, body {
 
 .formLogin{
   background-color: #000000;
+}
+
+#formCss{
+  margin: 10px;
 }
 
 
